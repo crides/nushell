@@ -121,7 +121,7 @@ quickcheck_macros = "1.0"
 rand = "0.8"
 ratatui = "0.26"
 rayon = "1.10"
-reedline = "0.31.0"
+reedline = { path = "../reedline" }
 regex = "1.9.5"
 ropey = "1.6.1"
 roxmltree = "0.19"
@@ -181,7 +181,7 @@ nu-std = { path = "./crates/nu-std", version = "0.92.1" }
 nu-system = { path = "./crates/nu-system", version = "0.92.1" }
 nu-utils = { path = "./crates/nu-utils", version = "0.92.1" }
 
-reedline = { workspace = true, features = ["bashisms", "sqlite"] }
+reedline = { path = "../reedline" }
 
 crossterm = { workspace = true }
 ctrlc = { workspace = true }
@@ -285,7 +285,6 @@ bench = false
 # To use a development version of a dependency please use a global override here
 # changing versions in each sub-crate of the workspace is tedious
 [patch.crates-io]
-# reedline = { git = "https://github.com/nushell/reedline", branch = "main" }
 # nu-ansi-term = {git = "https://github.com/nushell/nu-ansi-term.git", branch = "main"}
 
 # Run all benchmarks with `cargo bench`
